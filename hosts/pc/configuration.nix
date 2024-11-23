@@ -186,12 +186,13 @@
       ff = "fastfetch";
       update = "sudo nixos-rebuild switch";
       upgrade = "sudo nixos-rebuild switch --upgrade";
-      save-pc-config = ''
+      save-config-pc = ''
         cp -r /etc/nixos/. ~/nixos-configuration/hosts/pc && 
         cd ~/nixos-configuration && 
         git add . && 
         git commit -m "Update configuration" && 
-        git push 
+        git push &&
+        cd
       '';
     };
 

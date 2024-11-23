@@ -16,6 +16,7 @@
       ./steam.nix
     ];
 
+  # Comment to test alias update on Gitgub
 
   ### Bootloader ###
   boot.loader.systemd-boot.enable = false;
@@ -186,6 +187,13 @@
       ff = "fastfetch";
       update = "sudo nixos-rebuild switch";
       upgrade = "sudo nixos-rebuild switch --upgrade";
+      save-pc-config = ''
+        cp -r /etc/nixos/. ~/nixos-configuration/hosts/pc && 
+        cd ~/nixos-configuration && 
+        git add . && 
+        git commit -m "Update configuration" && 
+        git push 
+      '';
     };
 
     ohMyZsh = {

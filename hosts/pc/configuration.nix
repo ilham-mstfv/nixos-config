@@ -16,8 +16,6 @@
       ./steam.nix
     ];
 
-  # Comment to test Github
-
 
   ### Bootloader ###
   boot.loader.systemd-boot.enable = false;

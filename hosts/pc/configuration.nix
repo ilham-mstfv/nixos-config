@@ -16,7 +16,6 @@
       ./steam.nix
     ];
 
-  # Comment to test alias update on Gitgub
 
   ### Bootloader ###
   boot.loader.systemd-boot.enable = false;

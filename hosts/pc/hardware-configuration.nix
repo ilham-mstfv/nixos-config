@@ -13,12 +13,6 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # Masks permissions usage:
-  #   0  1  2  3  4  5  6  7
-  # r +  +  +  +  -  -  -  -
-  # w +  +  -  -  +  +  -  -
-  # x +  -  +  -  +  -  +  -
-
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1505e710-4424-4a42-9c5c-c86779179c0f";
@@ -35,15 +29,6 @@
   fileSystems."/mnt/homedisk" =
     { device = "/dev/disk/by-uuid/530b3477-f32c-4b2d-88d0-870ee2655804";
       fsType = "btrfs";
-      # options = [ "rw" "uid=1000" ]; # Enable read-write for this device.
-      # options = [ 
-      #   # "uid=ilham" 
-      #   # "gid=users" 
-      #   # "dmask=0007" 
-      #   # "fmask=0117"
-      #   # "nofail" 
-      # ];
-      # options = [ "allow_other" ]; # For non-root access
     };
 
   # Connect NTFS disk

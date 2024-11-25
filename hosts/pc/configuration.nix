@@ -16,6 +16,7 @@
       ./games.nix
     ];
 
+  # Test comment to git
 
   ### Bootloader ###
   boot.loader.systemd-boot.enable = false;

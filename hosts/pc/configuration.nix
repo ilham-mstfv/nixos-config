@@ -9,11 +9,11 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      # Nvidia settings
+      # Nvidia settings.
       ./nvidia.nix
 
-      # Steam app settings
-      ./steam.nix
+      # Steam and games settings.
+      ./games.nix
     ];
 
 

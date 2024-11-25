@@ -15,7 +15,8 @@
       # Steam and games settings.
       ./games.nix
     ];
-
+ 
+  # Test for git
 
   ### Bootloader ###
   boot.loader.systemd-boot.enable = false;

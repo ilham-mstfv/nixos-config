@@ -16,11 +16,11 @@
       ./games.nix
     ];
 
-  # Test comment to git
 
   ### Bootloader ###
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 7;
 
   boot.loader.grub = {
     enable = true;

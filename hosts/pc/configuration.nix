@@ -187,13 +187,37 @@
       ff = "fastfetch";
       update = "sudo nixos-rebuild switch";
       upgrade = "sudo nixos-rebuild switch --upgrade";
+
+      ## PC ##
       save-config-pc = ''
         cp -r /etc/nixos/. ~/nixos-configuration/hosts/pc && 
         cd ~/nixos-configuration && 
         git add . && 
-        git commit -m "Update configuration" && 
+        git commit -m "Update pc configuration" && 
         git push &&
         cd
+      '';
+      
+      save-new-config-pc = ''
+        rm -r ~/nixos-configuration/hosts/pc &&
+        mkdir ~/nixos-configuration/hosts/pc &&
+        save-config-pc
+      '';
+
+      ## GPD ##
+      save-config-gpd = ''
+        cp -r /etc/nixos/. ~/nixos-configuration/hosts/gpd && 
+        cd ~/nixos-configuration && 
+        git add . && 
+        git commit -m "Update gpd configuration" && 
+        git push &&
+        cd
+      '';
+
+      save-new-config-gpd = ''
+        rm -r ~/nixos-configuration/hosts/gpd &&
+        mkdir ~/nixos-configuration/hosts/gpd &&
+        save-config-gpd
       '';
     };
 

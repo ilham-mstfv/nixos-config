@@ -190,8 +190,8 @@
 
       ## PC ##
       save-config-pc = ''
-        cp -r /etc/nixos/. ~/nixos-configuration/hosts/pc && 
-        cd ~/nixos-configuration && 
+        cp -r /etc/nixos/. /mnt/homedisk/Code/Git/nixos-configuration/hosts/pc/ && 
+        cd /mnt/homedisk/Code/Git/nixos-configuration/ && 
         git add . && 
         git commit -m "Update pc configuration" && 
         git push &&
@@ -199,24 +199,24 @@
       '';
       
       save-new-config-pc = ''
-        rm -r ~/nixos-configuration/hosts/pc &&
-        mkdir ~/nixos-configuration/hosts/pc &&
+        rm -r /mnt/homedisk/Code/Git/nixos-configuration/hosts/pc/ &&
+        mkdir /mnt/homedisk/Code/Git/nixos-configuration/hosts/pc/ &&
         save-config-pc
       '';
 
       ## GPD ##
       save-config-gpd = ''
-        cp -r /etc/nixos/. ~/nixos-configuration/hosts/gpd && 
-        cd ~/nixos-configuration && 
+        cp -r /etc/nixos/. /mnt/homedisk/Code/Git/nixos-configuration/hosts/gpd/ && 
+        cd /mnt/homedisk/Code/Git/nixos-configuration/ && 
         git add . && 
         git commit -m "Update gpd configuration" && 
         git push &&
         cd
-      '';
+      ''; 
 
       save-new-config-gpd = ''
-        rm -r ~/nixos-configuration/hosts/gpd &&
-        mkdir ~/nixos-configuration/hosts/gpd &&
+        rm -r /mnt/homedisk/Code/Git/nixos-configuration/hosts/gpd/ &&
+        mkdir /mnt/homedisk/Code/Git/nixos-configuration/hosts/gpd/ &&
         save-config-gpd
       '';
     };

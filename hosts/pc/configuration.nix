@@ -43,7 +43,7 @@
 
 
   ### Experimental features ###
-  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 
   ### Linux kernel ###
@@ -185,8 +185,8 @@
     shellAliases = {
       ll = "ls -l";
       ff = "fastfetch";
-      update = "sudo nixos-rebuild switch";
-      upgrade = "sudo nixos-rebuild switch --upgrade";
+      update = "sudo nixos-rebuild switch --flake /etc/nixos#pc";
+      upgrade = "sudo nixos-rebuild switch --upgrade --flake /etc/nixos#pc";
 
       ## PC ##
       save-config-pc = ''

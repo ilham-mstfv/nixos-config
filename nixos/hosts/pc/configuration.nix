@@ -45,6 +45,15 @@
   ### Experimental features ###
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  
+  ### Nix Helper ###
+  programs.nh = {
+    enable = true;
+    # clean.enable = true;
+    # clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/etc/nixos";
+  };  
+
 
   ### Linux kernel ###
   # boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -382,7 +391,6 @@
     ## Other ##
     ventoy-full
     obsidian
-
   ];
 
 

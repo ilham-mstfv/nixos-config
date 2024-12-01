@@ -200,14 +200,23 @@
       ll = "ls -l";
       ff = "fastfetch";
 
+      # update = ''
+      #   sudo nixos-rebuild switch --flake /etc/nixos#pc
+      # '';
+
+      # upgrade = ''
+      #   sudo nix flake update --flake /etc/nixos &&
+      #   sudo nixos-rebuild switch --upgrade --flake /etc/nixos#pc
+      # '';
+
       update = ''
-        sudo nixos-rebuild switch --flake /etc/nixos#pc
+        nh os switch /etc/nixos --hostname pc
       '';
 
       upgrade = ''
-        sudo nix flake update --flake /etc/nixos &&
-        sudo nixos-rebuild switch --upgrade --flake /etc/nixos#pc
+        nh os switch /etc/nixos --hostname pc --update
       '';
+
 
       ## GIT ##
       save-config = ''
@@ -224,22 +233,6 @@
         mkdir /mnt/homedisk/Code/Git/nixos-configuration/nixos/ &&
         save-config
       '';
-
-      ## GPD ##
-      # save-config-gpd = ''
-      #   cp -r /etc/nixos/. /mnt/homedisk/Code/Git/nixos-configuration/hosts/gpd/ && 
-      #   cd /mnt/homedisk/Code/Git/nixos-configuration/ && 
-      #   git add . && 
-      #   git commit -m "Update gpd configuration" && 
-      #   git push &&
-      #   cd
-      # ''; 
-      # 
-      # save-new-config-gpd = ''
-      #   rm -r /mnt/homedisk/Code/Git/nixos-configuration/hosts/gpd/ &&
-      #   mkdir /mnt/homedisk/Code/Git/nixos-configuration/hosts/gpd/ &&
-      #   save-config-gpd
-      # '';
     };
 
     ohMyZsh = {

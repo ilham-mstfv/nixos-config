@@ -31,6 +31,11 @@
     efiSupport = true;
     useOSProber = true;
   };
+  
+  boot.kernelParams = [
+    "splash"
+    "quiet" 
+  ];
 
 
   ### Allow unfree packages ###

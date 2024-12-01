@@ -30,14 +30,6 @@
   };
 
 
-  ### Automatic Nix Garbage Collector ###
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
-
   ### Allow unfree packages ###
   nixpkgs.config.allowUnfree = true;
 
@@ -45,13 +37,26 @@
   ### Experimental features ###
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+
+  ### Automatic Nix Garbage Collector ### Disabled due to Nix Helper
+  nix.gc = {
+    automatic = false;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   
   ### Nix Helper ###
   programs.nh = {
     enable = true;
-    # clean.enable = true;
-    # clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/etc/nixos";
+
+    clean = 
+    { # Garbage Collector
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--keep-since 7d";
+    };    
   };  
 
 

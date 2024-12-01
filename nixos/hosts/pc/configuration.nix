@@ -208,7 +208,7 @@
       save-new-config = ''
         rm -r /mnt/homedisk/Code/Git/nixos-configuration/nixos/ &&
         mkdir /mnt/homedisk/Code/Git/nixos-configuration/nixos/ &&
-        save-config-pc
+        save-config
       '';
 
       ## GPD ##

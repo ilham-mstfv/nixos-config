@@ -351,6 +351,7 @@
     vim
     neovim
     wget
+    zip
     fd
     vlc
     alsa-utils
@@ -358,7 +359,8 @@
     zsh-powerlevel10k
     fastfetch
     python3Full
-
+    # cava
+    ntfs3g
 
     ## Internet ##
     floorp

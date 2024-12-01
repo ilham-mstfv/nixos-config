@@ -10,10 +10,13 @@
       ./hardware-configuration.nix
 
       # Nvidia settings.
-      ./nvidia.nix
+      ../../modules/hardware/nvidia.nix
+
+      # Alsamixer settings
+      ../../modules/hardware/alsamixer-settings.nix
 
       # Steam and games settings.
-      ./games.nix
+      ../../modules/games/games.nix
     ];
  
 
@@ -272,22 +275,6 @@
     # media-session.enable = true;
     wireplumber.enable = true;
   };
-
-
-  ### Alsamixer Stable Settings ###  Disable if on Unstable.
-  # sound.enable = true;
-  # sound.extraConfig = ''
-    # Saving alsamixer settings
-    # load-module module-alsa-sink
-    # load-module module-alsa-source
-
-    # Disabling Auto-Mute Mode
-    # options snd-hda-intel model=pch
-    # options snd-hda-intel auto_mute=0
-  # '';
-  
-  ### Alsamixer Unstable Settings ### Disable in on Stable.
-  hardware.alsa.enablePersistence = true;
 
 
   ### Enable touchpad support ### (enabled default in most desktopManager).

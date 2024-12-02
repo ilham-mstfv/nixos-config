@@ -12,11 +12,26 @@
       # Nvidia settings.
       ../../modules/hardware/nvidia.nix
 
+      # Zram
+      ../../modules/hardware/zram.nix
+
       # Alsamixer settings
       ../../modules/hardware/alsamixer-settings.nix
 
       # Steam and games settings.
       ../../modules/games/games.nix
+
+      # VirtualBox
+      ../../modules/virtualization/virtualbox.nix
+
+      # Docker
+      ../../modules/virtualization/docker.nix
+
+      # Btrfs auto scrub
+      ../../modules/services/btrfs-auto-scrub.nix
+
+      # Mount service
+      ../../modules/services/mount-disk.nix
     ];
  
 
@@ -73,37 +88,8 @@
   boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
 
-  ### Enable zram options ###
-  zramSwap = {
-    enable = true;
-    algorithm = "zstd";
-    memoryPercent = 30;
-  };
-
-
-  ### Enable auto scrub for btrfs ###
-  services.btrfs.autoScrub = {
-    enable = true;
-    interval = "weekly";
-    fileSystems = [ "/" ];
-  };
-
-
   ### Enable NTFS file system ###
   boot.supportedFilesystems = [ "ntfs" ];
-
-
-  ### Change owner of /mnt/homedisk. Temp solution. ###
-  systemd.services.changeOwnerHomedisk = {
-    description = "Change owner of /mnt/homedisk";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "local-fs.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.coreutils}/bin/chown -R ilham:1000 /mnt/homedisk";
-      # RemainAfterExit = true;
-    };
-  };  
 
 
   ### Network ###
@@ -127,31 +113,6 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = false; # App for configuring bluetooth.
-
-
-  ### VirtualBox ###
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "ilham" ];
-  
-  # Enable VBox Quest Additions
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-  # virtualisation.virtualbox.guest.enable = true;
-  # virtualisation.virtualbox.guest.dragAndDrop = true;
-  # virtualisation.virtualbox.guest.clipboard = true;
-  # virtualisation.virtualbox.guest.seamless = true;
-  # virtualisation.virtualbox.host.enableKvm = true;
-
-
-  ### Docker ###
-  virtualisation.docker.enable = true;
-  virtualisation.docker.enableOnBoot = false;
-  users.extraGroups.docker.members = [ "ilham" ]; # Write here your username.
-  virtualisation.docker.storageDriver = "btrfs"; # If you use btrfs.
-  
-  virtualisation.docker.daemon.settings = 
-  { # Store all docker's data in this location.
-    data-root = "/mnt/homedisk/Code/Docker/Files";
-  };
 
 
   # Set your time zone.

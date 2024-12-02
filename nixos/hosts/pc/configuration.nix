@@ -15,6 +15,9 @@
       # Zram
       ../../modules/hardware/zram.nix
 
+      # Bluetooth
+      ../../modules/hardware/bluetooth.nix
+
       # Alsamixer settings
       ../../modules/hardware/alsamixer-settings.nix
 
@@ -108,11 +111,6 @@
 
   # Enable network manager
   networking.networkmanager.enable = true;
-
-  # Bluetooth settings
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.blueman.enable = false; # App for configuring bluetooth.
 
 
   # Set your time zone.
@@ -244,7 +242,7 @@
 
 
   ### Enable touchpad support ### (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  # services.libinput.enable = true;
 
 
   ### User account and user packages ### Set a password with ‘passwd’.

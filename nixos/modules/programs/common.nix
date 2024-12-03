@@ -77,6 +77,8 @@
     ## Other ##
     ventoy-full
     obsidian
+
+    mari0
   ];
 
 

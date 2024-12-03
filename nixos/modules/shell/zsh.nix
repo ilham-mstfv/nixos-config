@@ -46,6 +46,10 @@
         mkdir /mnt/homedisk/Code/Git/nixos-configuration/nixos/ &&
         save-config
       '';
+
+      get-config = ''
+        sudo cp -r -i /mnt/homedisk/Code/Git/nixos-configuration/nixos/. /etc/nixos
+      '';
     };
 
     ohMyZsh = {

@@ -22,11 +22,12 @@
       # '';
 
       update = ''
-        nh os switch /etc/nixos --hostname pc
+        nh os switch
       '';
 
       upgrade = ''
-        nh os switch /etc/nixos --hostname pc --update
+        sudo nix flake update --flake /etc/nixos &&
+        nh os switch --update
       '';
 
 

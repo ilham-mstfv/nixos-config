@@ -48,7 +48,7 @@
       '';
 
       get-config = ''
-        sudo cp -r -i /mnt/homedisk/Code/Git/nixos-configuration/nixos/. /etc/nixos
+        sudo cp -r -u -i /mnt/homedisk/Code/Git/nixos-configuration/nixos/. /etc/nixos
       '';
     };
 

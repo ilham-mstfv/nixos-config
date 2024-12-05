@@ -74,6 +74,7 @@
    
     ## Office ##
     libreoffice-qt6
+    wpsoffice    
 
 
     ## Other ##

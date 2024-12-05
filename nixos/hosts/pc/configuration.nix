@@ -65,6 +65,9 @@
       # VirtualBox
       ../../modules/virtualization/virtualbox.nix
 
+      # Qemu and VirtManager
+      ../../modules/virtualization/qemu.nix
+
       # Docker
       ../../modules/virtualization/docker.nix
 

@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
       # Bootloader (grub/systemd-boot)
-      ../../modules/bootloader/bootloader.nix
+      ../../modules/bootloader/grub.nix
 
       # NixOS general settings
       ../../modules/nix/settings.nix
@@ -25,19 +25,18 @@
       # Zram
       ../../modules/hardware/zram.nix
 
-      # Alsamixer settings
-      ../../modules/hardware/alsamixer-settings.nix
-
       # Ntfs support
       ../../modules/hardware/ntfs.nix
      
       # Bluetooth
       ../../modules/hardware/bluetooth.nix
 
-      
-      # Shell settings
-      ../../modules/shell/zsh.nix
-      ../../modules/shell/kmscon.nix
+      # Sound settings
+      ../../modules/hardware/sound.nix
+
+
+      # User settings
+      ../../modules/users/main.nix
 
 
       # Network settings
@@ -50,6 +49,10 @@
       # Desktop Settings
       ../../modules/desktop/plasma.nix
 
+      # Shell settings
+      ../../modules/shell/zsh.nix
+      ../../modules/shell/kmscon.nix
+
       # Fonts
       ../../modules/fonts/settings.nix
 
@@ -59,7 +62,7 @@
 
 
       # Steam and games settings.
-      ../../modules/games/games.nix
+      ../../modules/games/common.nix
 
 
       # VirtualBox
@@ -77,6 +80,10 @@
 
       # Mount service
       ../../modules/services/mount-disk.nix
+
+      # Alsamixer settings
+      ../../modules/services/alsamixer-settings.nix
+
     ];
 
 
@@ -111,40 +118,10 @@
   services.xserver.xkb = {
     layout = "ru";
     variant = "";
-  };
-  
-
-  ### Sound Settings ###
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    #jack.enable = true;
-    
-    # media-session.enable = true;
-    wireplumber.enable = true;
-  };
+  }; 
 
 
-  ### User account and user packages ### Set a password with ‘passwd’.
-  users.users.ilham = {
-    isNormalUser = true;
-    description = "ilham";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      kdePackages.plasma-systemmonitor
-      kdePackages.yakuake
-      kdePackages.filelight
-      # thunderbird
-    ];
-  };
-
-
-  # List packages installed in system profile. To search: $ nix search wget
+  # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     
   ];

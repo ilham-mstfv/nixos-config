@@ -15,6 +15,11 @@
     "nvidia-drm.modeset=1" 
     "nvidia_drm.fbdev=1" 
   ];
+
+  ## Below needs to be tested
+  # boot.kernelModules = [ 
+  #   "nvidia_uvm" 
+  # ];
   
 
   ### Hardware acceliration ### Comment this on Unstable branch.

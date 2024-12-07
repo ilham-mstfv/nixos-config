@@ -47,5 +47,19 @@
       get-config = ''
         sudo cp -r /mnt/homedisk/Code/Git/nixos-configuration/nixos/. /etc/nixos
       '';
+
+      fetch-config = ''
+        cd /mnt/homedisk/Code/Git/nixos-configuration/ &&
+        git pull
+        cd
+      '';
+
+      fetch-new-config = ''
+        cd /mnt/homedisk/Code/Git/nixos-configuration/ &&
+        git fetch
+        rm -r ./nixos &&
+        git reset --hard origin/master &&
+        cd
+      '';
   };
 }

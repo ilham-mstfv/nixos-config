@@ -11,4 +11,6 @@
   { # Store all docker's data in this location.
     data-root = "/mnt/homedisk/Code/Docker/Files";
   };
+
+  environment.systemPackages = with pkgs; [ docker docker-compose ];
 }

@@ -55,9 +55,7 @@
     qbittorrent-enhanced
 
 
-    ## Developing ##
-    docker
-    docker-compose
+    ## Development ##
     jetbrains.idea-ultimate
     jetbrains.pycharm-community
 

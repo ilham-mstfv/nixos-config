@@ -5,6 +5,8 @@
       ll = "ls -l";
       ff = "fastfetch";
 
+      modules = "cd /etc/nixos/modules";
+      hosts = "cd /etc/nixos/hosts";
 
       ## Nix Package with Flakes ## Disabled due to Nix Helper
       # update = ''

@@ -2,8 +2,9 @@
 
 {
    
-  ### Nvidia card settings ###
+  ### Nvidia videocard settings ###
   ### https://nixos.wiki/wiki/Nvidia ###
+  ### https://wiki.hyprland.org/Nvidia/ ###
 
 
   ### Set Nvidia video driver ###
@@ -11,31 +12,49 @@
 
 
   ### Nvidia kernel parameters ###
-  boot.kernelParams = [ 
-    "nvidia-drm.modeset=1" 
-    "nvidia_drm.fbdev=1" 
-  ];
+  boot = {
 
-  ## Below needs to be tested
-  # boot.kernelModules = [ 
-  #   "nvidia_uvm" 
-  # ];
+    kernelParams = [ 
+      "nvidia-drm.modeset=1" 
+      "nvidia_drm.fbdev=1"
+      "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+    ];
+    
+    initrd.kernelModules = [ 
+      "nvidia"
+      "nvidia_modeset" 
+      "nvidia_uvm" 
+      "nvidia_drm"
+    ];
   
 
-  ### Hardware acceliration ### Comment this on Unstable branch.
-  # hardware.opengl = {
-  #   enable = true;
-  #   driSupport = true;
-  #   driSupport32Bit = true;
-  # };
+    ## Fix random flickering ## Warning! It's a nuke method ##
+    ## Use this method only if something doesn't work well. ##
+    extraModprobeConfig=''
+      options nvidia_drm modeset=1 fbdev=1
+      options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3"
+    '';
+  };
 
-  ### Hardware acceliration ### Comment this on Stable branch.
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };  
 
-  
+
+  ### Hardware acceliration ### 
+  hardware = {
+
+    ## Use this on Unstable branch ##
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };  
+
+    ## Use this on Stable branch ##
+    # opengl = {
+    #   enable = true;
+    #   driSupport = true;
+    #   driSupport32Bit = true;
+    # };  
+  };
+
   ### Nvidia Settings ###
   hardware.nvidia = {
     
@@ -78,10 +97,10 @@
 
     ## Wayland ##
     # WLR_RENDERER = "vulkan";
-    # MOZ_ENABLE_WAYLAND = "1";
-    # QT_QPA_PLATFORM = "wayland";
-    # NIXOS_OZONE_WL = "1";
-    # XDG_SESSION_TYPE = "wayland";
+    MOZ_ENABLE_WAYLAND = "1";
+    QT_QPA_PLATFORM = "wayland";
+    NIXOS_OZONE_WL = "1";
+    XDG_SESSION_TYPE = "wayland";
   };
 
   ### Useful packages for Nvidia ###
@@ -92,5 +111,9 @@
     virtualglLib
     vulkan-loader
     vulkan-tools
+
+    nvidia-vaapi-driver
+    vaapiVdpau
+    libvdpau-va-gl
   ];
 }

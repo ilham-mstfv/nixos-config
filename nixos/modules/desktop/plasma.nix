@@ -7,8 +7,8 @@
 
   # SDDM settings.
   services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = false; # Enable this if you use only Wayland
-  # services.displayManager.sddm.enableHidpi = true; # I don't know what is this, but it can be useful.
+  services.displayManager.sddm.wayland.enable = true; # Enable this if you use only Wayland
+  services.displayManager.sddm.enableHidpi = true; # I don't know what is this, but it can be useful.
 
   # KDE Plasma session.
   services.desktopManager.plasma6.enable = true;

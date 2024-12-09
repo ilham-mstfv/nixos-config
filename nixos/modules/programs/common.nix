@@ -48,6 +48,13 @@
     # cava
     ntfs3g
 
+
+    ## Plasma Utils ##
+    filelight
+    plasma-systemmonitor
+    kate
+
+
     ## Internet ##
     floorp
     chromium

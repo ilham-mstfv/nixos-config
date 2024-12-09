@@ -48,6 +48,7 @@
 
       # Desktop Settings
       ../../modules/desktop/plasma.nix
+      ../../modules/desktop/sddm.nix
 
       # Shell settings
       ../../modules/shell/zsh.nix

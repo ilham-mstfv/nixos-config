@@ -2,18 +2,21 @@
 
 {
   ### Plasma Session Settings ###
-  # X11 windowing system. Can be disabled if only Wayland.
+  ### Better use SDDM with Plasma ###
+  ### ./modules/desktop/sddm.nix ###
+
+  ## X11 windowing system ## Can be disabled ##
   services.xserver.enable = true;
 
-  # SDDM settings.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true; # Enable this if you use only Wayland
-  services.displayManager.sddm.enableHidpi = true; # I don't know what is this, but it can be useful.
 
-  # KDE Plasma session.
-  services.desktopManager.plasma6.enable = true;
-  services.desktopManager.plasma6.enableQt5Integration = true; # Disable for full QT6
+  ## KDE Plasma6 session ##
+  services.desktopManager = {
+    plasma6 = {
+      # Enable Plasma 6 ##
+      enable = true;
 
-  # Default session.
-  # services.displayManager.defaultSession = "plasma"; # May be pointless
+      # Disable for full QT6 ##
+      enableQt5Integration = true; 
+    }; 
+  };
 }

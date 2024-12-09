@@ -7,11 +7,7 @@
     description = "ilham";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
-      kdePackages.plasma-systemmonitor
-      kdePackages.yakuake
-      kdePackages.filelight
-      # thunderbird
+      
     ];
   };
 }

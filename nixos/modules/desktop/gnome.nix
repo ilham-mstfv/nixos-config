@@ -9,7 +9,11 @@
   services.xserver.enable = true;
 
   ## Enable Gnome
-  desktopManager.gnome.enable = true;
+  services.xserver.desktopManager = {
+    gnome = {
+      enable = true;
+    };
+  };
 
 
   ## Enable gnome-settings-daemon udev rules ##
@@ -21,7 +25,9 @@
 
 
   ## Install some packages ##
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
+    gnome.adwaita-icon-theme
+ 
     gnomeExtensions.appindicator 
   ];
 

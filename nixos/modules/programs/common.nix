@@ -18,7 +18,9 @@
   programs.obs-studio.enable = true;
 
   # Enable syncthing
-  services.syncthing.enable = true;
+  services.syncthing = {
+    enable = true;
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -33,25 +35,21 @@
   # List packages installed in system profile. To search: $ nix search wget
   environment.systemPackages = with pkgs; [
 
-    ## System ##
+    ## CLI Tools ##
     vim
     neovim
     wget
-    zip
     fd
-    vlc
+    zip
     syncthing
     zsh-powerlevel10k
     fastfetch
     python3Full
     # cava
-    ntfs3g
 
-
-    ## Plasma Utils ##
-    filelight
-    plasma-systemmonitor
-    kate
+    
+    ## Multimedia ##
+    vlc
 
 
     ## Internet ##

@@ -6,84 +6,88 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ ## Include the results of the hardware scan ##
       ./hardware-configuration.nix
 
-      # Bootloader (grub/systemd-boot)
+      ## Bootloader settings ##
       ../../modules/bootloader/grub.nix
 
-      # NixOS general settings
+      ## NixOS general settings ##
       ../../modules/nix/settings.nix
 
-      # Linux Kernel settings
+      ## Linux Kernel settings ##
       ../../modules/hardware/kernel.nix
 
 
-      # Nvidia settings.
+      ## Hardware ##
+        # Nvidia 
       ../../modules/hardware/nvidia.nix
 
-      # Zram
+        # Zram 
       ../../modules/hardware/zram.nix
 
-      # Ntfs support
+        # Ntfs support 
       ../../modules/hardware/ntfs.nix
      
-      # Bluetooth
+        # Bluetooth 
       ../../modules/hardware/bluetooth.nix
 
-      # Sound settings
+        # Sound settings 
       ../../modules/hardware/sound.nix
 
 
-      # User settings
+      ## User settings ##
       ../../modules/users/main.nix
 
 
-      # Network settings
+      ## Network settings ##
       ../../modules/network/firewall.nix
       ../../modules/network/wireless.nix
       ../../modules/network/dns.nix
       ../../modules/network/proxy.nix
 
 
-      # Desktop Settings
+      ## Desktop Settings ##
+        # Plasma Desktop 
       ../../modules/desktop/plasma.nix
       ../../modules/desktop/sddm.nix
+
+        # Gnome Desktop 
+      #../../modules/desktop/gnome.nix
+      #../../modules/desktop/gdm.nix
+
 
       # Shell settings
       ../../modules/shell/zsh.nix
       ../../modules/shell/kmscon.nix
       ../../modules/shell/shellAliases.nix
 
-      # Fonts
+      ## Fonts ##
       ../../modules/fonts/settings.nix
 
       
-      # Programs
+      ## Programs ##
       ../../modules/programs/common.nix
 
 
-      # Steam and games settings.
+      ## Steam and games settings ##
       ../../modules/games/common.nix
 
 
-      # VirtualBox
+      ## Virtualization ##
       ../../modules/virtualization/virtualbox.nix
-
-      # Qemu and VirtManager
       ../../modules/virtualization/qemu.nix
-
-      # Docker
       ../../modules/virtualization/docker.nix
 
 
-      # Btrfs auto scrub
+      ## Services ##
+        # Btrfs auto scrub #
       ../../modules/services/btrfs-auto-scrub.nix
 
-      # Mount service
+        # Mount service #
       ../../modules/services/mount-disk.nix
 
-      # Alsamixer settings
+        # Alsamixer settings #
       ../../modules/services/alsamixer-settings.nix
 
     ];

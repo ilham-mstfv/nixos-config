@@ -40,7 +40,6 @@
     zip
     fd
     vlc
-    alsa-utils
     syncthing
     zsh-powerlevel10k
     fastfetch

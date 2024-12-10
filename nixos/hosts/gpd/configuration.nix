@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -49,12 +49,12 @@
 
       ## Desktop Settings ##
         # Plasma Desktop 
-      #../../modules/desktop/plasma.nix
-      #../../modules/desktop/sddm.nix
+      ../../modules/desktop/plasma.nix
+      ../../modules/desktop/sddm.nix
 
         # Gnome Desktop 
-      ../../modules/desktop/gnome.nix
-      ../../modules/desktop/gdm.nix
+      #../../modules/desktop/gnome.nix
+      #../../modules/desktop/gdm.nix
 
 
       # Shell settings
@@ -90,6 +90,11 @@
         # Alsamixer settings #
       #../../modules/services/alsamixer-settings.nix
     ];
+
+  ## Overrides ##
+  boot.loader.timeout = lib.mkForce 2;
+
+  services.displayManager.sddm.enableHidpi = lib.mkForce false;
 
 
   ### Network ###

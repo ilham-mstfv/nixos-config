@@ -23,6 +23,9 @@
         # Nvidia 
       #../../modules/hardware/nvidia.nix
 
+        # Logitech
+      ../../modules/hardware/logitech.nix
+
         # Zram 
       ../../modules/hardware/zram.nix
 
@@ -95,8 +98,6 @@
   #boot.loader.timeout = lib.mkForce 2;
   #services.displayManager.sddm.enableHidpi = lib.mkForce false;
   #services.displayManager.sddm.wayland.enable = lib.mkForce false;
-
-  hardware.logitech.wireless.enable = true;
 
 
   ### Network ###

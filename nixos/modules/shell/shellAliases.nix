@@ -36,7 +36,7 @@
         cd /mnt/homedisk/Code/Git/nixos-configuration/ && 
         git add . && 
         git commit -m "Update configuration" && 
-        git push &&
+        git push origin master &&
         cd
       '';
 
@@ -57,13 +57,13 @@
 
       fetch-config = ''
         cd /mnt/homedisk/Code/Git/nixos-configuration/ &&
-        git pull
+        git pull origin master
         cd
       '';
 
       fetch-new-config = ''
         cd /mnt/homedisk/Code/Git/nixos-configuration/ &&
-        git fetch
+        git fetch origin master
         rm -r ./nixos &&
         git reset --hard origin/master &&
         cd

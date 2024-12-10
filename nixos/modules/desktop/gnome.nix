@@ -26,7 +26,7 @@
 
   ## Install some packages ##
   environment.systemPackages = with pkgs; [
-    gnome.adwaita-icon-theme
+    pkgs.adwaita-icon-theme
  
     gnomeExtensions.appindicator 
   ];

@@ -92,8 +92,7 @@
     ];
 
   ## Overrides ##
-  boot.loader.timeout = lib.mkForce 2;
-
+  #boot.loader.timeout = lib.mkForce 2;
   #services.displayManager.sddm.enableHidpi = lib.mkForce false;
   #services.displayManager.sddm.wayland.enable = lib.mkForce false;
 

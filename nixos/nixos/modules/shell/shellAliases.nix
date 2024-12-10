@@ -32,7 +32,7 @@
 
       ## GIT ##
       save-config = ''
-        cp -r /etc/nixos/. /mnt/homedisk/Code/Git/nixos-configuration/nixos/ && 
+        cp -r /etc/nixos /mnt/homedisk/Code/Git/nixos-configuration/nixos && 
         cd /mnt/homedisk/Code/Git/nixos-configuration/ && 
         git add . && 
         git commit -m "Update configuration" && 

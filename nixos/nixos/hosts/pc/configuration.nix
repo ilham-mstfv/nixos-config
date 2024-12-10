@@ -2,11 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ ## Include the results of the hardware scan ##
       ./hardware-configuration.nix
 
       ## Bootloader settings ##
@@ -21,14 +21,14 @@
 
       ## Hardware ##
         # Nvidia 
-      #../../modules/hardware/nvidia.nix
+      ../../modules/hardware/nvidia.nix
 
         # Zram 
       ../../modules/hardware/zram.nix
 
         # Ntfs support 
       ../../modules/hardware/ntfs.nix
-
+     
         # Bluetooth 
       ../../modules/hardware/bluetooth.nix
 
@@ -59,13 +59,13 @@
 
       # Shell settings
       ../../modules/shell/zsh.nix
-      #../../modules/shell/kmscon.nix
+      ../../modules/shell/kmscon.nix
       ../../modules/shell/shellAliases.nix
 
       ## Fonts ##
       ../../modules/fonts/settings.nix
 
-
+      
       ## Programs ##
       ../../modules/programs/common.nix
 
@@ -75,35 +75,30 @@
 
 
       ## Virtualization ##
-      #../../modules/virtualization/virtualbox.nix
-      #../../modules/virtualization/qemu.nix
-      #../../modules/virtualization/docker.nix
+      ../../modules/virtualization/virtualbox.nix
+      ../../modules/virtualization/qemu.nix
+      ../../modules/virtualization/docker.nix
 
 
       ## Services ##
         # Btrfs auto scrub #
-      #../../modules/services/btrfs-auto-scrub.nix
+      ../../modules/services/btrfs-auto-scrub.nix
 
         # Mount service #
       ../../modules/services/mount-disk.nix
 
         # Alsamixer settings #
-      #../../modules/services/alsamixer-settings.nix
+      ../../modules/services/alsamixer-settings.nix
+
     ];
 
-  ## Overrides ##
-  #boot.loader.timeout = lib.mkForce 2;
-  #services.displayManager.sddm.enableHidpi = lib.mkForce false;
-  #services.displayManager.sddm.wayland.enable = lib.mkForce false;
-
-  hardware.logitech.wireless.enable = true;
 
 
   ### Network ###
-  # Hostname
-  networking.hostName = "gpd";
+  # Hostname.
+  networking.hostName = "pc";
 
-  # Enable networking
+  # Enable network manager
   networking.networkmanager.enable = true;
 
 
@@ -111,27 +106,28 @@
   time.timeZone = "Asia/Baku";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "ru_RU.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
+    LC_ADDRESS = "ru_RU.UTF-8";
+    LC_IDENTIFICATION = "ru_RU.UTF-8";
+    LC_MEASUREMENT = "ru_RU.UTF-8";
+    LC_MONETARY = "ru_RU.UTF-8";
+    LC_NAME = "ru_RU.UTF-8";
+    LC_NUMERIC = "ru_RU.UTF-8";
+    LC_PAPER = "ru_RU.UTF-8";
+    LC_TELEPHONE = "ru_RU.UTF-8";
+    LC_TIME = "ru_RU.UTF-8";
   };
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "ru";
     variant = "";
-  };
+  }; 
 
 
+  # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     
   ];

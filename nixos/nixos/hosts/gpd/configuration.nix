@@ -96,8 +96,6 @@
   #services.displayManager.sddm.enableHidpi = lib.mkForce false;
   #services.displayManager.sddm.wayland.enable = lib.mkForce false;
 
-  hardware.logitech.wireless.enable = true;
-
 
   ### Network ###
   # Hostname

@@ -17,9 +17,22 @@
 
       ## Enable hiDpi support ##
       enableHidpi = true;
-
-      ## Theme Settings ## 
-      theme = "${pkgs.catppuccin-sddm-corners}/share/sddm/themes";
     };
   };
+
+  ## Theme Settings ##
+  services.displayManager.sddm.theme = "sddm-astronaut-theme";
+  
+  environment.systemPackages = [
+    # https://github.com/Keyitdev/sddm-astronaut-theme/blob/master/theme.conf
+    # It is possible to override the package and set themeConfig. For now, I will iterate like this.
+    pkgs.sddm-astronaut
+    (pkgs.writeTextDir "share/sddm/themes/sddm-astronaut-theme/theme.conf.user" ''
+      [General]
+      FullBlur="false"
+      PartialBlur="false"
+      FormPosition="center"
+    '')
+  ];
+  
 }

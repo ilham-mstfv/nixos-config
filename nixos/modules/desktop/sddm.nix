@@ -29,8 +29,9 @@
     pkgs.sddm-astronaut
     (pkgs.writeTextDir "share/sddm/themes/sddm-astronaut-theme/theme.conf.user" ''
       [General]
+      background= /mnt/homedisk/Wallpapers/nixos/nixos-minimal.png
       FullBlur="false"
-      PartialBlur="false"
+      PartialBlur="true"
       FormPosition="center"
     '')
   ];

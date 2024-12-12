@@ -29,8 +29,7 @@
     pkgs.sddm-astronaut
     (pkgs.writeTextDir "share/sddm/themes/sddm-astronaut-theme/theme.conf.user" ''
       [General]
-      background= ${pkgs.pantheon.elementary-wallpapers}/share/backgrounds/Martin\ Adams.jpg   
-        # /mnt/homedisk/Wallpapers/nixos/nixos-minimal-fjsj.png
+      # background= ${pkgs.catppuccin-sddm}/share/sddm/themes/catppuccin-sddm-corners/backgrounds/hashtags-large.png
       FullBlur="false"
       PartialBlur="true"
       FormPosition="center"

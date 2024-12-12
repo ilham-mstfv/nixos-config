@@ -19,7 +19,7 @@
       enableHidpi = true;
 
       ## Theme Settings ## 
-      theme = "${pkgs.catppuccin-sddm-corners}/share/sddm/themes/catppuccin-sddm-corners";
+      theme = "${pkgs.catppuccin-sddm-corners}/share/sddm/themes";
     };
   };
 }

@@ -29,7 +29,7 @@
     pkgs.sddm-astronaut
     (pkgs.writeTextDir "share/sddm/themes/sddm-astronaut-theme/theme.conf.user" ''
       [General]
-      # background= ${pkgs.catppuccin-sddm}/share/sddm/themes/catppuccin-sddm-corners/backgrounds/hashtags-large.png
+      # background= /folder/file.png
       FullBlur="false"
       PartialBlur="true"
       FormPosition="center"

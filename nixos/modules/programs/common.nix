@@ -22,6 +22,12 @@
     enable = true;
   };
 
+  # The Fuck Service
+  programs.thefuck = {
+    enable = true;
+    alias = "fuck";
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

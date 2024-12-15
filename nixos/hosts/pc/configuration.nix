@@ -59,7 +59,7 @@
 
       # Shell settings
       ../../modules/shell/zsh.nix
-      ../../modules/shell/kmscon.nix
+      #../../modules/shell/kmscon.nix
       ../../modules/shell/shellAliases.nix
 
       ## Fonts ##

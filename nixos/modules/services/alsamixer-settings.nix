@@ -9,7 +9,7 @@
   ## Deprecated ##
   sound.enable = true;
   sound.extraConfig = ''
-    Saving alsamixer settings
+    # Saving alsamixer settings
     load-module module-alsa-sink
     load-module module-alsa-source
   

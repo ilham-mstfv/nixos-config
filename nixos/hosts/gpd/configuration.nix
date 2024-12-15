@@ -91,7 +91,7 @@
       ../../modules/services/mount-disk.nix
 
         # Tlp service #
-      ../../modules/services/tlp.nix
+      #../../modules/services/tlp.nix
 
         # Alsamixer settings #
       #../../modules/services/alsamixer-settings.nix

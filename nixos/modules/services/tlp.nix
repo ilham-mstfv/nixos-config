@@ -23,4 +23,9 @@
 
     };
   };
+
+  # TLP Service is in conflict with power-profiles-damon #
+  # Be sure to disable it #
+  services.power-profiles-daemon.enable = false;
+
 }  

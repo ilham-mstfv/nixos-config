@@ -92,6 +92,8 @@
     ## Other ##
     ventoy-full
     obsidian
+
+    xclip
     wl-clipboard
   ];
 

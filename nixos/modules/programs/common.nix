@@ -55,7 +55,6 @@
     fd
     zip
     syncthing
-    zsh-powerlevel10k
     fastfetch
     python3Full
     # cava

@@ -4,7 +4,7 @@
   environment.shellAliases = {
       ll = "ls -l";
       ff = "fastfetch";
-      cl = "clean";
+      cl = "clear";
 
       modules = "cd /etc/nixos/modules";
       hosts = "cd /etc/nixos/hosts";

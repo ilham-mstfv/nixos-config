@@ -4,19 +4,23 @@
   environment.shellAliases = {
       ll = "ls -l";
       ff = "fastfetch";
+      cl = "clean";
 
       modules = "cd /etc/nixos/modules";
       hosts = "cd /etc/nixos/hosts";
 
+
       ## Nix Package with Flakes ## Disabled due to Nix Helper
-      # update = ''
-      #   sudo nixos-rebuild switch --flake /etc/nixos#pc
-      # '';
-      #
-      # upgrade = ''
-      #   sudo nix flake update --flake /etc/nixos &&
-      #   sudo nixos-rebuild switch --upgrade --flake /etc/nixos#pc
-      # '';
+      /*
+      update = ''
+        sudo nixos-rebuild switch --flake /etc/nixos#pc
+      '';
+      
+      upgrade = ''
+        sudo nix flake update --flake /etc/nixos &&
+        sudo nixos-rebuild switch --upgrade --flake /etc/nixos#pc
+      '';
+      */
 
 
       ## Nix Helper ##

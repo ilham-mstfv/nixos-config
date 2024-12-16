@@ -39,7 +39,7 @@
 
 
   ### Hardware features for Steam ### For example Controller support
-  # hardware.steam-hardware.enable = true;
+  hardware.steam-hardware.enable = true;
 
 
   ### Xbox controller support ### 
@@ -50,7 +50,6 @@
   environment.systemPackages = with pkgs; [
 
     ## System ##
-    # steam-run
     mangohud
     vkbasalt
 

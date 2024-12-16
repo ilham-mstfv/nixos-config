@@ -49,8 +49,6 @@
   environment.systemPackages = with pkgs; [
 
     ## CLI Tools ##
-    # vim
-    # neovim
     wget
     fd
     zip

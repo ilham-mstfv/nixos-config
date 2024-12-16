@@ -28,6 +28,13 @@
     alias = "fuck";
   };
 
+  # Enable Neovim
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    viAlias = true;
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -42,8 +49,8 @@
   environment.systemPackages = with pkgs; [
 
     ## CLI Tools ##
-    vim
-    neovim
+    # vim
+    # neovim
     wget
     fd
     zip

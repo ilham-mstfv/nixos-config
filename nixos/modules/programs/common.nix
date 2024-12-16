@@ -52,10 +52,10 @@
     wget
     fd
     zip
+    cava
     syncthing
     fastfetch
     python3Full
-    # cava
 
     
     ## Multimedia ##
@@ -92,6 +92,7 @@
     ## Other ##
     ventoy-full
     obsidian
+    wl-clipboard
   ];
 
 

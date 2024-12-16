@@ -48,11 +48,13 @@
     };  
 
     ## Use this on Stable branch ##
-    # opengl = {
-    #   enable = true;
-    #   driSupport = true;
-    #   driSupport32Bit = true;
-    # };  
+    /*
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };  
+    */
   };
 
   ### Nvidia Settings ###

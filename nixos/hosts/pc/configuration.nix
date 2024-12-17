@@ -66,7 +66,11 @@
       ../../modules/fonts/settings.nix
 
       ## Locales ##
+      #../../modules/locales/en-us.nix
       ../../modules/locales/ru-ru.nix
+      #../../modules/locales/us-keymap.nix
+      #../../modules/locales/ru-keymap.nix
+      ../../modules/locales/baku-timeZone.nix
 
       
       ## Programs ##
@@ -103,19 +107,6 @@
 
   # Enable network manager
   networking.networkmanager.enable = true;
-
-
-  # Set your time zone.
-  time.timeZone = "Asia/Baku";
-
-
-  # Configure keymap in X11
-  /*
-  services.xserver.xkb = {
-    layout = "ru";
-    variant = "";
-  }; 
-  */
 
 
   # List packages installed in system profile

@@ -60,8 +60,8 @@
   ### Nvidia Settings ###
   hardware.nvidia = {
     
-    ## Nvidia drivers. ## Options: stable, beta, production, vulkan_beta, legacy_470 (or 390/340).
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    ## Nvidia drivers. ## Options: production, stable, latest, beta, vulkan_beta, legacy_470/390/340
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
 
     ## Modesetting is required. ##
     modesetting.enable = true;    

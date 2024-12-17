@@ -7,21 +7,20 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
 
-    nixosConfigurations.pc = nixpkgs.lib.nixosSystem {      
-      system = "x86_64-linux";
+    nixosConfigurations = { 
+
+      pc = nixpkgs.lib.nixosSystem {      
+        system = "x86_64-linux";
       
-      modules = [
-        ./hosts/pc/configuration.nix
-      ];
+        modules = [ ./hosts/pc/configuration.nix ];
+      };
+
+      gpd = nixpkgs.lib.nixosSystem {      
+        system = "x86_64-linux";
+
+        modules = [ ./hosts/gpd/configuration.nix ];
+      };    
+
     };
-
-    nixosConfigurations.gpd = nixpkgs.lib.nixosSystem {      
-      system = "x86_64-linux";
-
-      modules = [
-        ./hosts/gpd/configuration.nix
-      ];
-    };    
-
   };
 }

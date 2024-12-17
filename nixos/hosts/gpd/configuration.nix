@@ -104,7 +104,7 @@
       #../../modules/services/alsamixer-settings.nix
 
         # Wakeup Fix for GPD #
-      #../../modules/services/wakeup-service.nix
+      ../../modules/services/wakeup-service.nix
     ];
 
   ## Overrides ##

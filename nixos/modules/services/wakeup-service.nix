@@ -9,7 +9,7 @@
 
     serviceConfig = {
       Type = "oneshot";
-      RemainAfterExit = false;
+      RemainAfterExit = true;
 
       ## Script ##
       ExecStart = ''

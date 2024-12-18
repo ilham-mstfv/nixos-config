@@ -3,7 +3,10 @@
 {
   
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    package = pkgs.floorp;
+  };
 
   # Install chromium
   programs.chromium.enable = true;
@@ -63,7 +66,7 @@
 
 
     ## Internet ##
-    floorp
+    #floorp
     chromium
     telegram-desktop
     qbittorrent-enhanced

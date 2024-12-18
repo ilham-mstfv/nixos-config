@@ -66,6 +66,7 @@
 
 
     ## Internet ##
+    chromium
     telegram-desktop
     qbittorrent-enhanced
 

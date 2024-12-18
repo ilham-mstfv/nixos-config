@@ -66,8 +66,6 @@
 
 
     ## Internet ##
-    #floorp
-    chromium
     telegram-desktop
     qbittorrent-enhanced
 

@@ -19,8 +19,7 @@
       ../../modules/hardware/kernel.nix
 
 
-      ## Hardware ##
-        # Nvidia 
+      ## Hardware ## Nvidia 
       ../../modules/hardware/nvidia.nix
 
         # Zram 
@@ -74,9 +73,6 @@
       #../../modules/locales/us-keymap.nix
       #../../modules/locales/ru-keymap.nix
       ../../modules/locales/baku-timeZone.nix
-
-
-
 
       
       ## Programs ##

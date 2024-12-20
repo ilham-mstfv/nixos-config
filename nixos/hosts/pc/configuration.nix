@@ -57,7 +57,7 @@
       #../../modules/desktop/gdm.nix
 
         # Hyprland Desktop
-      ../../modules/desktop/hyprland.nix
+      #../../modules/desktop/hyprland.nix
 
 
       # Shell settings
@@ -74,6 +74,9 @@
       #../../modules/locales/us-keymap.nix
       #../../modules/locales/ru-keymap.nix
       ../../modules/locales/baku-timeZone.nix
+
+
+
 
       
       ## Programs ##

@@ -42,5 +42,8 @@
 
     ## Polkit authentication agent ##
     hyprpolkitagent
+    
+    ## Terminal ##
+    kitty
   ];
 }

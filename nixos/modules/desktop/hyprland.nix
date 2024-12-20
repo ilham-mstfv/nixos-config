@@ -45,5 +45,8 @@
     
     ## Terminal ##
     kitty
+
+    ## App Menu ##
+    wofi
   ];
 }

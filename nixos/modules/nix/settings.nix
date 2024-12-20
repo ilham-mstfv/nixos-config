@@ -9,6 +9,10 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 
+  ### Optimise store on each rebuild ###
+  nix.settings.auto-optimise-store = true;
+
+
   ### Automatic Nix Garbage Collector ### Disabled due to Nix Helper
   nix.gc = {
     automatic = false;

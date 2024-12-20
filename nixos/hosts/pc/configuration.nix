@@ -19,7 +19,8 @@
       ../../modules/hardware/kernel.nix
 
 
-      ## Hardware ## Nvidia 
+      ## Hardware ## 
+        # Nvidia 
       ../../modules/hardware/nvidia.nix
 
         # Zram 

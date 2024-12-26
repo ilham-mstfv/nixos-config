@@ -13,10 +13,10 @@
       enable = true;
 
       ## Wayland Support ##
-      wayland.enable = false;
+      wayland.enable = true;
 
       ## Enable hiDpi support ##
-      enableHidpi = false;
+      enableHidpi = true;
     };
   };
 

@@ -80,8 +80,10 @@
       [ # Write your VSCode extensions here.
         jnoortheen.nix-ide
         vscjava.vscode-java-pack
-        ms-azuretools.vscode-docker
-        ms-vscode-remote.remote-containers
+        ms-python.python
+	vscodevim.vim
+        #ms-azuretools.vscode-docker
+        #ms-vscode-remote.remote-containers
       ];
     })
  

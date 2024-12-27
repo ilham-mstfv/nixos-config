@@ -1,14 +1,23 @@
 { pkgs, config, libs, ... }:
 
-{
-  ### Firewall settings. ###
-  networking.firewall.allowedTCPPorts = [ 
-    22000  32857 # Syncthing TCP ports 
-  ];
-  networking.firewall.allowedUDPPorts = [ 
-    22000  32857 # Syncthing UDP ports
-  ];
-  
-  # Disable the firewall altogether. Not recommended.
-  # networking.firewall.enable = false;
+{ ### Firewall settings ### 
+  networking.firewall = { 
+    enable = true;
+    
+    allowedTCPPorts = [ 
+      ## Syncthing ## 
+      22000 32857
+      
+      ## Ventoy ##
+      26000 16000 10809
+    ];
+
+    allowedUDPPorts = [ 
+      ## Syncthing ## 
+      22000 32857
+      
+      ## Ventoy ##
+      67 68 69 
+    ];
+  };
 }

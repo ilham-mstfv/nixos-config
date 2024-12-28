@@ -81,7 +81,7 @@
 
 
       ## Games ##
-      #../../modules/games/common.nix
+      ../../modules/games/common.nix
 
 
       ## Virtualization ##

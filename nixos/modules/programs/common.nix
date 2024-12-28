@@ -51,13 +51,15 @@
   # List packages installed in system profile. To search: $ nix search wget
   environment.systemPackages = with pkgs; [
 
-    ## CLI Tools ##
+    ## System Tools ##
     wget
     fd
     zip
     cava
     btop
     htop
+    xclip
+    wl-clipboard
     syncthing
     fastfetch
     python3Full
@@ -96,11 +98,6 @@
     ## Wine ##
     wineWowPackages.stable 
     winetricks 
-
-
-    ## Clipboard ##
-    xclip
-    wl-clipboard
 
 
     ## Other ##

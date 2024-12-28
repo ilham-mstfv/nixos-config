@@ -14,7 +14,7 @@
 
     allowedUDPPorts = [ 
       ## Syncthing ## 
-      22000 32857
+      22000 32857 21027
       
       ## Ventoy ##
       67 68 69 

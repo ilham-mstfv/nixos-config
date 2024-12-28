@@ -56,6 +56,8 @@
     fd
     zip
     cava
+    btop
+    htop
     syncthing
     fastfetch
     python3Full
@@ -82,8 +84,6 @@
         vscjava.vscode-java-pack
         ms-python.python
 	vscodevim.vim
-        #ms-azuretools.vscode-docker
-        #ms-vscode-remote.remote-containers
       ];
     })
  
@@ -93,12 +93,15 @@
     wpsoffice    
 
 
+    ## Clipboard ##
+    xclip
+    wl-clipboard
+
+
     ## Other ##
     ventoy-full
     obsidian
 
-    xclip
-    wl-clipboard
   ];
 
 

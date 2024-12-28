@@ -1,8 +1,7 @@
 { pkgs, config, libs, ... }:
 
-{
-  # Configure DNS servers
-  # networking.nameservers = [ 
-  #   "dns.adguard.com" 
-  # ];
+{ ### Configure DNS servers ###
+  networking.nameservers = [ 
+    #"dns.adguard.com" 
+  ];
 }

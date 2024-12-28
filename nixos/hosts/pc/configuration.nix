@@ -80,8 +80,8 @@
       ../../modules/programs/common.nix
 
 
-      ## Steam and games settings ##
-      ../../modules/games/common.nix
+      ## Games ##
+      #../../modules/games/common.nix
 
 
       ## Virtualization ##

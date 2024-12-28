@@ -93,6 +93,11 @@
     wpsoffice    
 
 
+    ## Wine ##
+    wineWowPackages.stable 
+    winetricks 
+
+
     ## Clipboard ##
     xclip
     wl-clipboard

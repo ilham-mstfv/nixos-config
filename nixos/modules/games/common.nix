@@ -53,10 +53,6 @@
     mangohud
     vkbasalt
 
-    ## Wine ##
-    wineWowPackages.stable # Both 32 and 64 bit apps
-    winetricks
-
     ## Minecraft ##
     prismlauncher
   ];

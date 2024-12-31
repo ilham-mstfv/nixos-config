@@ -88,7 +88,7 @@
       ../../modules/virtualization/virtualbox.nix
       ../../modules/virtualization/qemu.nix
       ../../modules/virtualization/docker.nix
-
+      ../../modules/virtualization/waydroid.nix
 
       ## Services ##
         # Btrfs auto scrub #

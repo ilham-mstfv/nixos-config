@@ -76,8 +76,8 @@
 
 
     ## Development ##
-    #jetbrains.idea-ultimate
-    #jetbrains.pycharm-community
+    jetbrains.idea-ultimate
+    jetbrains.pycharm-community
 
     (vscode-with-extensions.override {
       vscodeExtensions = with vscode-extensions; 

@@ -32,6 +32,13 @@
     gnomeExtensions.blur-my-shell 
     gnomeExtensions.dynamic-panel
 
+    gnomeExtensions.arcmenu
+    gnomeExtensions.caffeine
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.removable-drive-menu
+    gnomeExtensions.vitals
+    gnomeExtensions.dock-from-dash
+    gnomeExtensions.sound-output-device-chooser
   ];
 
   ## Set a profile picture use command ##

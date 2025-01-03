@@ -77,7 +77,7 @@
 
 
       ## Programs ##
-      #../../modules/programs/common.nix
+      ../../modules/programs/common.nix
 
 
       ## Steam and games settings ##
@@ -119,21 +119,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  ## List packages installed in system profile ##
-  environment.systemPackages = with pkgs; [
-    neovim
-    git
-    xclip
-    wl-clipboard
-  ];
 
 
 

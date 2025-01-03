@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
       ## Bootloader settings ##
-      #../../modules/bootloader/grub.nix
+      ../../modules/bootloader/grub.nix
 
       ## NixOS general settings ##
       #../../modules/nix/settings.nix
@@ -107,10 +107,6 @@
       #../../modules/services/wakeup-service.nix
     ];
 
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

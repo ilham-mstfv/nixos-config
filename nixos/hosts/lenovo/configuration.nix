@@ -6,9 +6,107 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ ## Include the results of the hardware scan ##
       ./hardware-configuration.nix
+
+      ## Bootloader settings ##
+      #../../modules/bootloader/grub.nix
+
+      ## NixOS general settings ##
+      #../../modules/nix/settings.nix
+
+      ## Linux Kernel settings ##
+      #../../modules/hardware/kernel.nix
+
+
+      ## Hardware ##
+        # Nvidia 
+      #../../modules/hardware/nvidia.nix
+
+        # Logitech
+      #../../modules/hardware/logitech.nix
+
+        # Zram 
+      #../../modules/hardware/zram.nix
+
+        # Ntfs support 
+      #../../modules/hardware/ntfs.nix
+
+        # Bluetooth 
+      #../../modules/hardware/bluetooth.nix
+
+        # Sound settings 
+      #../../modules/hardware/sound.nix
+
+
+      ## User settings ##
+      #../../modules/users/main.nix
+
+
+      ## Network settings ##
+      #../../modules/network/firewall.nix
+      #../../modules/network/wireless.nix
+      #../../modules/network/dns.nix
+      #../../modules/network/proxy.nix
+
+
+      ## Desktop Settings ##
+        # Plasma Desktop 
+      #../../modules/desktop/plasma.nix
+      #../../modules/desktop/sddm.nix
+
+        # Gnome Desktop 
+      #../../modules/desktop/gnome.nix
+      #../../modules/desktop/gdm.nix
+
+
+      ## Shell settings ##
+      ../../modules/shell/zsh.nix
+      #../../modules/shell/kmscon.nix
+      #../../modules/shell/shellAliases.nix
+
+      ## Fonts ##
+      ../../modules/fonts/settings.nix
+
+      ## Locales ##
+      #../../modules/locales/en-us.nix
+      ../../modules/locales/ru-ru.nix
+      #../../modules/locales/us-keymap.nix
+      ../../modules/locales/ru-keymap.nix
+      ../../modules/locales/baku-timeZone.nix
+
+
+      ## Programs ##
+      #../../modules/programs/common.nix
+
+
+      ## Steam and games settings ##
+      #../../modules/games/common.nix
+
+
+      ## Virtualization ##
+      #../../modules/virtualization/virtualbox.nix
+      #../../modules/virtualization/qemu.nix
+      #../../modules/virtualization/docker.nix
+
+
+      ## Services ##
+        # Btrfs auto scrub #
+      #../../modules/services/btrfs-auto-scrub.nix
+
+        # Mount service #
+      #../../modules/services/mount-disk.nix
+
+        # Tlp service #
+      #../../modules/services/tlp.nix
+
+        # Alsamixer settings #
+      #../../modules/services/alsamixer-settings.nix
+
+        # Wakeup Fix for GPD #
+      #../../modules/services/wakeup-service.nix
     ];
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -17,11 +115,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "lenovo"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -100,6 +193,10 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    neovim
+    git
+    xclip
+    wl-clipboard
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

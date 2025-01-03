@@ -30,7 +30,7 @@
       #../../modules/hardware/zram.nix
 
         # Ntfs support 
-      #../../modules/hardware/ntfs.nix
+      ../../modules/hardware/ntfs.nix
 
         # Bluetooth 
       #../../modules/hardware/bluetooth.nix

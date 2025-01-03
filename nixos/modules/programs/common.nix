@@ -56,6 +56,7 @@
     fd
     zip
     cava
+    inxi
     btop
     htop
     xclip

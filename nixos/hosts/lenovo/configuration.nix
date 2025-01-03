@@ -16,7 +16,7 @@
       ../../modules/nix/settings.nix
 
       ## Linux Kernel settings ##
-      #../../modules/hardware/kernel.nix
+      ../../modules/hardware/kernel.nix
 
 
       ## Hardware ##
@@ -44,10 +44,10 @@
 
 
       ## Network settings ##
-      #../../modules/network/firewall.nix
-      #../../modules/network/wireless.nix
-      #../../modules/network/dns.nix
-      #../../modules/network/proxy.nix
+      ../../modules/network/firewall.nix
+      ../../modules/network/wireless.nix
+      ../../modules/network/dns.nix
+      ../../modules/network/proxy.nix
 
 
       ## Desktop Settings ##

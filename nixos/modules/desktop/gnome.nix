@@ -29,6 +29,9 @@
     pkgs.adwaita-icon-theme
  
     gnomeExtensions.appindicator 
+    gnomeExtensions.blur-my-shell 
+    gnomeExtensions.dynamic-panel
+
   ];
 
   ## Set a profile picture use command ##

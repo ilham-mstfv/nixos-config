@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -13,7 +13,7 @@
       ../../modules/bootloader/grub.nix
 
       ## NixOS general settings ##
-      #../../modules/nix/settings.nix
+      ../../modules/nix/settings.nix
 
       ## Linux Kernel settings ##
       #../../modules/hardware/kernel.nix
@@ -107,6 +107,11 @@
       #../../modules/services/wakeup-service.nix
     ];
 
+  ## Overrides ##
+  programs.nh = {
+    enable = lib.mkForce true;
+    flake = lib.mkForce "/home/ilham/nixos-configuration/nixos";
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

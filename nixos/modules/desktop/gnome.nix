@@ -43,6 +43,7 @@
     gnomeExtensions.dock-from-dash
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.battery-health-charging
+    gnomeExtensions.ideapad
   ];
 
   ## Set a profile picture use command ##

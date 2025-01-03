@@ -26,7 +26,10 @@
 
   ## Install some packages ##
   environment.systemPackages = with pkgs; [
-    pkgs.adwaita-icon-theme
+
+    gparted
+
+    pkgs.adwaita-icon-theme 
  
     gnomeExtensions.appindicator 
     gnomeExtensions.blur-my-shell 

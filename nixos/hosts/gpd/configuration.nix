@@ -112,7 +112,7 @@
   #services.displayManager.sddm.enableHidpi = lib.mkForce false;
   #services.displayManager.sddm.wayland.enable = lib.mkForce false;
   boot.loader.grub.default = lib.mkForce 2;
-
+  boot.loader.timeout = 2;
 
   ### Network ###
   # Hostname

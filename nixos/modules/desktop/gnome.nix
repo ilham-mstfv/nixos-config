@@ -42,6 +42,7 @@
     gnomeExtensions.vitals
     gnomeExtensions.dock-from-dash
     gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.battery-health-charging
   ];
 
   ## Set a profile picture use command ##

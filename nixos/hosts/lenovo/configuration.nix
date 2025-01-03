@@ -27,7 +27,7 @@
       #../../modules/hardware/logitech.nix
 
         # Zram 
-      #../../modules/hardware/zram.nix
+      ../../modules/hardware/zram.nix
 
         # Ntfs support 
       ../../modules/hardware/ntfs.nix

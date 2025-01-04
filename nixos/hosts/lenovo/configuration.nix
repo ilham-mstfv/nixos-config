@@ -113,6 +113,9 @@
     flake = lib.mkForce "/home/ilham/nixos-configuration/nixos";
   };
 
+  boot.loader.timeout = lib.mkForce 2;
+
+
 
   ## Networking ##
   networking.hostName = "lenovo"; # Define your hostname.

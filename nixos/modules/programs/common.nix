@@ -84,6 +84,7 @@
       vscodeExtensions = with vscode-extensions; 
       [ # Write your VSCode extensions here.
         jnoortheen.nix-ide
+	bbenoist.nix
         vscjava.vscode-java-pack
         ms-python.python
 	vscodevim.vim

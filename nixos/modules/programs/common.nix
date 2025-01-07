@@ -61,6 +61,7 @@
     htop
     xclip
     wl-clipboard
+    zsh-nix-shell
     syncthing
     fastfetch
     python3Full

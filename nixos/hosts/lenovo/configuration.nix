@@ -87,7 +87,7 @@
       ## Virtualization ##
       #../../modules/virtualization/virtualbox.nix
       #../../modules/virtualization/qemu.nix
-      #../../modules/virtualization/docker.nix
+      ../../modules/virtualization/docker.nix
 
 
       ## Services ##
@@ -95,7 +95,7 @@
       #../../modules/services/btrfs-auto-scrub.nix
 
         # Mount service #
-      #../../modules/services/mount-disk.nix
+      ../../modules/services/mount-disk.nix
 
         # Tlp service #
       #../../modules/services/tlp.nix

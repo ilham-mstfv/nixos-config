@@ -24,6 +24,11 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+  
+  fileSystems."/mnt/homedisk" =
+    { device = "/dev/disk/by-uuid/21d42242-338e-4041-b831-86e566148897";
+      fsType = "btrfs";
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/52f6ee87-6aa8-4b39-9612-f66acd932960"; }

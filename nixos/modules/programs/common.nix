@@ -77,6 +77,7 @@
 
 
     ## Development ##
+    postman
     jetbrains.idea-ultimate
     jetbrains.pycharm-community
 

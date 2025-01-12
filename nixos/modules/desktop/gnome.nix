@@ -47,6 +47,12 @@
     gnomeExtensions.ideapad
   ];
 
+  environment.sessionVariables = {
+    ## Enable fractional scaling ## 
+    GDK_DEBUG = "gl-fractional"; 
+  }; 
+
+
   ## Set a profile picture use command ##
   ## $ mv /path/to/image.jpg ~/.face ##
 }

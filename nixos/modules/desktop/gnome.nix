@@ -45,6 +45,7 @@
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.battery-health-charging
     gnomeExtensions.ideapad
+    gnomeExtensions.pop-shell
   ];
 
 

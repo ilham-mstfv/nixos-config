@@ -59,6 +59,7 @@
     inxi
     btop
     htop
+    warpd
     xclip
     wl-clipboard
     syncthing

@@ -44,6 +44,7 @@
     battery-health-charging
     ideapad
     pop-shell   
+    better-desktop-zoom
   ]);
 
 

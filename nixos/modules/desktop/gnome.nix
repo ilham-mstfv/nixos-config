@@ -25,28 +25,26 @@
 
 
   ## Install some packages ##
-  environment.systemPackages = with pkgs; [
-
+  environment.systemPackages = (with pkgs; [
     gnome-tweaks
-    gparted
-    
-    pkgs.adwaita-icon-theme 
- 
-    gnomeExtensions.appindicator 
-    gnomeExtensions.blur-my-shell 
-    gnomeExtensions.dynamic-panel
+    gparted    
+    adwaita-icon-theme 
 
-    gnomeExtensions.arcmenu
-    gnomeExtensions.caffeine
-    gnomeExtensions.clipboard-indicator
-    gnomeExtensions.removable-drive-menu
-    gnomeExtensions.vitals
-    gnomeExtensions.dock-from-dash
-    gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.battery-health-charging
-    gnomeExtensions.ideapad
-    gnomeExtensions.pop-shell
-  ];
+  ]) ++ (with pkgs.gnomeExtensions; [
+    appindicator 
+    blur-my-shell 
+    dynamic-panel 
+    arcmenu
+    caffeine
+    clipboard-indicator
+    removable-drive-menu
+    vitals
+    dock-from-dash
+    sound-output-device-chooser
+    battery-health-charging
+    ideapad
+    pop-shell   
+  ]);
 
 
   ## Set a profile picture use command ##

@@ -89,6 +89,8 @@
 	bbenoist.nix
         vscjava.vscode-java-pack
         ms-python.python
+	ms-python.vscode-pylance
+	ms-python.debugpy
 	vscodevim.vim
       ];
     })

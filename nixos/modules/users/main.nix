@@ -6,8 +6,6 @@
     isNormalUser = true;
     description = "ilham";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.filelight      
-    ];
+    packages = with pkgs; [  ];
   };
 }

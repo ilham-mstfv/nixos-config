@@ -12,11 +12,18 @@
   ## KDE Plasma6 session ##
   services.desktopManager = {
     plasma6 = {
-      # Enable Plasma 6 ##
+      ## Enable Plasma 6 ##
       enable = true;
 
-      # Disable for full QT6 ##
+      ## Disable for full QT6 ##
       enableQt5Integration = true; 
     }; 
   };
+
+  
+  ## Install some packages ##
+  environment.systemPackages = with pkgs; [
+    kdePackages.filelight   
+  ];
+
 }

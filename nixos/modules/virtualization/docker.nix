@@ -2,15 +2,22 @@
 
 {
   ### Docker ###
-  virtualisation.docker.enable = true;
-  virtualisation.docker.enableOnBoot = false;
-  users.extraGroups.docker.members = [ "ilham" ]; # Write here your username.
-  virtualisation.docker.storageDriver = "btrfs"; # If you use btrfs.
-  
-  virtualisation.docker.daemon.settings = 
-  { # Store all docker's data in this location.
-    data-root = "/mnt/homedisk/Code/Docker/Files";
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = false;
+      storageDriver = "btrfs"; # If you use btrfs.
+
+      daemon.settings = 
+      { # Store all docker's data in this location.
+        data-root = "/mnt/homedisk/Code/Docker/Files";
+      };
+    };
   };
 
+  ## Write here your username ##
+  users.extraGroups.docker.members = [ "ilham" ];   
+
+  ## Install some packages ##
   environment.systemPackages = with pkgs; [ docker docker-compose ];
 }

@@ -45,6 +45,11 @@
     ideapad
     pop-shell   
     better-desktop-zoom
+    quick-settings-tweaker
+    privacy-settings-menu
+    logo-menu
+    top-bar-organizer
+    dash2dock-lite
   ]);
 
 

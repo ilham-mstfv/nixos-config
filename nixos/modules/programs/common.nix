@@ -92,6 +92,7 @@
 	ms-python.vscode-pylance
 	ms-python.debugpy
 	vscodevim.vim
+	github.github-vscode-theme
       ];
     })
  

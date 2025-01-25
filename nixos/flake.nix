@@ -10,27 +10,29 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-
+  outputs = { self, nixpkgs, ... }@inputs:
+  let
+    system = "x86_64-linux";
+    vars = {
+      user = "ilham";
+    };
+  in
+  {
     nixosConfigurations = { 
       pc = nixpkgs.lib.nixosSystem {      
-        system = "x86_64-linux";      
-	specialArgs = { inherit inputs; };
+        specialArgs = { inherit self inputs system vars; }; 
         modules = [ ./hosts/pc/configuration.nix ];
       };
 
       gpd = nixpkgs.lib.nixosSystem {      
-        system = "x86_64-linux";
-	specialArgs = { inherit inputs; };
+        specialArgs = { inherit self inputs system vars; }; 
         modules = [ ./hosts/gpd/configuration.nix ];
       };    
 
       lenovo = nixpkgs.lib.nixosSystem {      
-        system = "x86_64-linux";
-	specialArgs = { inherit inputs; };
+        specialArgs = { inherit self inputs system vars; }; 
         modules = [ ./hosts/lenovo/configuration.nix ];
       }; 
     };
-
   };
 }

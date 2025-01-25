@@ -1,4 +1,4 @@
-{ pkgs, libs, ... }:
+{ pkgs, libs, vars, ... }:
 
 {
   ### Docker ###
@@ -16,7 +16,7 @@
   };
 
   ## Write here your username ##
-  users.extraGroups.docker.members = [ "ilham" ];   
+  users.extraGroups.docker.members = [ "${vars.user}" ];   
 
   ## Install some packages ##
   environment.systemPackages = with pkgs; [ docker docker-compose ];

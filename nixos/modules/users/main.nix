@@ -1,10 +1,10 @@
-{ pkgs, config, libs, ... }:
+{ pkgs, config, libs, vars, ... }:
 
 {
   ### User account and user packages ### Set a password with ‘passwd’.
-  users.users.ilham = {
+  users.users.${vars.user} = {
     isNormalUser = true;
-    description = "ilham";
+    description = "${vars.user}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [  ];
   };

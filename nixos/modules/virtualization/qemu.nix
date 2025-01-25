@@ -1,10 +1,10 @@
-{ pkgs, config, libs, ... }:
+{ pkgs, config, libs, vars, ... }:
 
 { ## Qemu ## 
 
   virtualisation.libvirtd.enable = true;
   
-  users.users.ilham = {
+  users.users.${vars.user} = {
     extraGroups = [ "libvirtd" ];
   };
 

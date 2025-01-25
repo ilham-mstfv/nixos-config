@@ -1,4 +1,4 @@
-{ pkgs, libs, ... }:
+{ pkgs, libs, vars, ... }:
 
 {
   ### Change owner of /mnt/homedisk. Temp solution. ###
@@ -8,7 +8,7 @@
     after = [ "local-fs.target" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.coreutils}/bin/chown -R ilham:1000 /mnt/homedisk";
+      ExecStart = "${pkgs.coreutils}/bin/chown -R ${vars.user}:1000 /mnt/homedisk";
       # RemainAfterExit = true;
     };
   };

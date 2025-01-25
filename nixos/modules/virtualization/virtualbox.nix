@@ -1,9 +1,9 @@
-{ pkgs, libs, ... }:
+{ pkgs, libs, vars, ... }:
 
 {
   ### VirtualBox ###
   virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "ilham" ];
+  users.extraGroups.vboxusers.members = [ "${vars.user}" ];
   
 
   ## Enable VBox Quest Additions ##

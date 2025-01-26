@@ -50,6 +50,7 @@
     logo-menu
     top-bar-organizer
     dash2dock-lite
+    compiz-alike-magic-lamp-effect
   ]);
 
 

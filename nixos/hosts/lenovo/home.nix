@@ -9,11 +9,12 @@
   home.homeDirectory = "/home/${vars.user}";
 
   home.packages = with pkgs; [
-    alacritty
+    
   ];
 
-  home.file = {
-  };
+  home.file."home-test/home-test.txt".text = ''
+    TEST FILE
+  '';
 
   home.sessionVariables = {
     EDITOR = "nvim";

@@ -2,12 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, system, vars, ... }:
 
 {
   imports =
     [ ## Include the results of the hardware scan ##
       ./hardware-configuration.nix
+
+      ## Home Manager ##
+      inputs.home-manager.nixosModules.default
 
       ## Bootloader settings ##
       ../../modules/bootloader/grub.nix
@@ -115,6 +118,15 @@
 
   boot.loader.timeout = lib.mkForce 2;
 
+
+  ## Home Manager ##
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs system vars; };
+    users.${vars.user} = import ./home.nix;
+  };
 
 
   ## Networking ##

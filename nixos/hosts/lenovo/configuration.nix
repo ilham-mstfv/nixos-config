@@ -111,11 +111,6 @@
     ];
 
   ## Overrides ##
-  programs.nh = {
-    enable = lib.mkForce true;
-    flake = lib.mkForce "/home/ilham/nixos-configuration/nixos";
-  };
-
   boot.loader.timeout = lib.mkForce 2;
 
 

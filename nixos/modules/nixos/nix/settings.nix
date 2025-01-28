@@ -1,4 +1,4 @@
-{ pkgs, config, libs, ... }:
+{ pkgs, config, libs, vars, ... }:
 
 {
   ### Allow unfree packages ###
@@ -24,7 +24,7 @@
   ### Nix Helper ###
   programs.nh = {
     enable = true;
-    flake = "/etc/nixos";
+    flake = "/home/${vars.user}/nixos-config/nixos";
 
     clean = 
     { # Garbage Collector

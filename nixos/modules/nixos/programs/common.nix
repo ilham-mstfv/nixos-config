@@ -23,6 +23,7 @@
   # Enable syncthing
   services.syncthing = {
     enable = true;
+    openDefaultPorts = true;
   };
 
   # The Fuck Service

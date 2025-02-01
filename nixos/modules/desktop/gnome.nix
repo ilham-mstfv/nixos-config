@@ -39,7 +39,7 @@
     clipboard-indicator
     removable-drive-menu
     vitals
-    dock-from-dash
+    dash-to-dock
     sound-output-device-chooser
     battery-health-charging
     ideapad

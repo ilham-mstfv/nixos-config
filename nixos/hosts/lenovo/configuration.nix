@@ -13,101 +13,101 @@
       inputs.home-manager.nixosModules.default
 
       ## Bootloader settings ##
-      ../../modules/nixos/bootloader/grub.nix
+      ../../modules/bootloader/grub.nix
 
       ## NixOS general settings ##
-      ../../modules/nixos/nix/settings.nix
+      ../../modules/nix/settings.nix
 
       ## Linux Kernel settings ##
-      ../../modules/nixos/hardware/kernel.nix
+      ../../modules/hardware/kernel.nix
 
 
       ## Hardware ##
         # Nvidia 
-      #../../modules/nixos/hardware/nvidia.nix
+      #../../modules/hardware/nvidia.nix
 
         # Logitech
-      #../../modules/nixos/hardware/logitech.nix
+      #../../modules/hardware/logitech.nix
 
         # Zram 
-      ../../modules/nixos/hardware/zram.nix
+      ../../modules/hardware/zram.nix
 
         # Ntfs support 
-      ../../modules/nixos/hardware/ntfs.nix
+      ../../modules/hardware/ntfs.nix
 
         # Bluetooth 
-      #../../modules/nixos/hardware/bluetooth.nix
+      #../../modules/hardware/bluetooth.nix
 
         # Sound settings 
-      ../../modules/nixos/hardware/sound.nix
+      ../../modules/hardware/sound.nix
 
 
       ## User settings ##
-      ../../modules/nixos/users/main.nix
+      ../../modules/users/main.nix
 
 
       ## Network settings ##
-      ../../modules/nixos/network/firewall.nix
-      ../../modules/nixos/network/wireless.nix
-      ../../modules/nixos/network/dns.nix
-      ../../modules/nixos/network/proxy.nix
+      ../../modules/network/firewall.nix
+      ../../modules/network/wireless.nix
+      ../../modules/network/dns.nix
+      ../../modules/network/proxy.nix
 
 
       ## Desktop Settings ##
         # Plasma Desktop 
-      #../../modules/nixos/desktop/plasma.nix
-      #../../modules/nixos/desktop/sddm.nix
+      #../../modules/desktop/plasma.nix
+      #../../modules/desktop/sddm.nix
 
         # Gnome Desktop 
-      ../../modules/nixos/desktop/gnome.nix
-      ../../modules/nixos/desktop/gdm.nix
+      ../../modules/desktop/gnome.nix
+      ../../modules/desktop/gdm.nix
 
 
       ## Shell settings ##
-      ../../modules/nixos/shell/zsh.nix
-      #../../modules/nixos/shell/kmscon.nix
-      #../../modules/nixos/shell/shellAliases.nix
+      ../../modules/shell/zsh.nix
+      #../../modules/shell/kmscon.nix
+      #../../modules/shell/shellAliases.nix
 
       ## Fonts ##
-      ../../modules/nixos/fonts/settings.nix
+      ../../modules/fonts/settings.nix
 
       ## Locales ##
-      #../../modules/nixos/locales/en-us.nix
-      ../../modules/nixos/locales/ru-ru.nix
-      #../../modules/nixos/locales/us-keymap.nix
-      ../../modules/nixos/locales/ru-keymap.nix
-      ../../modules/nixos/locales/baku-timeZone.nix
+      #../../modules/locales/en-us.nix
+      ../../modules/locales/ru-ru.nix
+      #../../modules/locales/us-keymap.nix
+      ../../modules/locales/ru-keymap.nix
+      ../../modules/locales/baku-timeZone.nix
 
 
       ## Programs ##
-      ../../modules/nixos/programs/common.nix
+      ../../modules/programs/common.nix
 
 
       ## Steam and games settings ##
-      #../../modules/nixos/games/common.nix
+      #../../modules/games/common.nix
 
 
       ## Virtualization ##
-      #../../modules/nixos/virtualization/virtualbox.nix
-      #../../modules/nixos/virtualization/qemu.nix
-      ../../modules/nixos/virtualization/docker.nix
+      #../../modules/virtualization/virtualbox.nix
+      #../../modules/virtualization/qemu.nix
+      ../../modules/virtualization/docker.nix
 
 
       ## Services ##
         # Btrfs auto scrub #
-      #../../modules/nixos/services/btrfs-auto-scrub.nix
+      #../../modules/services/btrfs-auto-scrub.nix
 
         # Mount service #
-      ../../modules/nixos/services/mount-disk.nix
+      ../../modules/services/mount-disk.nix
 
         # Tlp service #
-      #../../modules/nixos/services/tlp.nix
+      #../../modules/services/tlp.nix
 
         # Alsamixer settings #
-      #../../modules/nixos/services/alsamixer-settings.nix
+      #../../modules/services/alsamixer-settings.nix
 
         # Wakeup Fix for GPD #
-      #../../modules/nixos/services/wakeup-service.nix
+      #../../modules/services/wakeup-service.nix
     ];
 
   ## Overrides ##

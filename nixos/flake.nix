@@ -38,5 +38,25 @@
         modules = [ ./hosts/lenovo/configuration.nix ];
       }; 
     };
+
+    homeConfigurations = {
+      "${vars.user}@pc" = inputs.home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./hosts/pc/home.nix ];
+        extraSpecialArgs = { inherit self inputs system vars; };
+      };
+
+      "${vars.user}@gpd" = inputs.home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./hosts/gpd/home.nix ];
+        extraSpecialArgs = { inherit self inputs system vars; };
+      };
+
+      "${vars.user}@lenovo" = inputs.home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./hosts/lenovo/home.nix ];
+        extraSpecialArgs = { inherit self inputs system vars; };
+      };
+    };
   };
 }

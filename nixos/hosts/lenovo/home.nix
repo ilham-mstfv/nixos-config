@@ -1,9 +1,10 @@
-{ config, pkgs, vars, ... }:
+{ config, pkgs, lib, inputs, system, vars, ... }:
 
 {
   imports = [
     #../../modules/home/...
   ];
+
 
   home.username = "${vars.user}";
   home.homeDirectory = "/home/${vars.user}";
@@ -13,11 +14,11 @@
   ];
 
   home.file."home-test/home-test.txt".text = ''
-    TEST FILE
+    Lenovo TEST FILE
   '';
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    
   };
 
   

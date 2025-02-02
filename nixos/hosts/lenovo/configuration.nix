@@ -9,9 +9,6 @@
     [ ## Include the results of the hardware scan ##
       ./hardware-configuration.nix
 
-      ## Home Manager ##
-      inputs.home-manager.nixosModules.default
-
       ## Bootloader settings ##
       ../../modules/bootloader/grub.nix
 
@@ -112,16 +109,6 @@
 
   ## Overrides ##
   boot.loader.timeout = lib.mkForce 2;
-
-
-  ## Home Manager ##
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs system vars; };
-    users.${vars.user} = import ./home.nix;
-  };
 
 
   ## Networking ##

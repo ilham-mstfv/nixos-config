@@ -65,10 +65,10 @@
       ../../modules/fonts/settings.nix
 
       ## Locales ##
-      #../../modules/locales/en-us.nix
-      ../../modules/locales/ru-ru.nix
-      #../../modules/locales/us-keymap.nix
-      ../../modules/locales/ru-keymap.nix
+      ../../modules/locales/en-us.nix
+      #../../modules/locales/ru-ru.nix
+      ../../modules/locales/us-keymap.nix
+      #../../modules/locales/ru-keymap.nix
       ../../modules/locales/baku-timeZone.nix
 
 

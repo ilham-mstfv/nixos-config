@@ -13,6 +13,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
+    pkgs = import nixpkgs { inherit system; };
     vars = {
       user = "ilham";
     };
@@ -20,16 +21,19 @@
   {
     nixosConfigurations = { 
       pc = nixpkgs.lib.nixosSystem {      
+        inherit system;
         specialArgs = { inherit self inputs system vars; }; 
         modules = [ ./hosts/pc/configuration.nix ];
       };
 
       gpd = nixpkgs.lib.nixosSystem {      
+        inherit system;
         specialArgs = { inherit self inputs system vars; }; 
         modules = [ ./hosts/gpd/configuration.nix ];
       };    
 
       lenovo = nixpkgs.lib.nixosSystem {      
+        inherit system;
         specialArgs = { inherit self inputs system vars; }; 
         modules = [ ./hosts/lenovo/configuration.nix ];
       }; 

@@ -79,8 +79,8 @@
       ../../modules/programs/common.nix
 
 
-      ## Steam and games settings ##
-      #../../modules/games/common.nix
+      ## Games settings ##
+      ../../modules/games/common.nix
 
 
       ## Virtualization ##

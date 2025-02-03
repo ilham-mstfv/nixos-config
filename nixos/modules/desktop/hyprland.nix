@@ -32,7 +32,6 @@
 
     ## Wallpapers ##
     hyprpaper
-    hyprwall # GUI
 
     ## Blue-light filter ##
     hyprsunset

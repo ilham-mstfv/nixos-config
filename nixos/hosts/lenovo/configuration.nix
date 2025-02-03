@@ -55,6 +55,9 @@
       ../../modules/desktop/gnome.nix
       ../../modules/desktop/gdm.nix
 
+        # Hyprland Desktop
+      ../../modules/desktop/hyprland.nix
+
 
       ## Shell settings ##
       ../../modules/shell/zsh.nix

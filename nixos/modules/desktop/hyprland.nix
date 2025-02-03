@@ -45,9 +45,6 @@
     ## Polkit authentication agent ##
     hyprpolkitagent
 
-    ## Display info app ##
-    hyprsysteminfo
-    
     ## Terminal ##
     kitty
 

@@ -40,13 +40,23 @@
     ## Wayland color picker ##
     hyprpicker
 
+    ## Hyrpland Cursor ##
+    hyprcursor
+
+    ## QT Support ##
+    hyprland-qt-support
+
     ## Polkit authentication agent ##
     hyprpolkitagent
+
+    ## Display info app ##
+    hyprsysteminfo
     
     ## Terminal ##
     kitty
 
     ## App Menu ##
     wofi
+    rofi
   ];
 }

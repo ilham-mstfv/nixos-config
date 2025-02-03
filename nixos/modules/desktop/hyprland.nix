@@ -48,6 +48,9 @@
     ## Terminal ##
     kitty
 
+    ## Status Bar ##
+    waybar
+
     ## App Menu ##
     wofi
     rofi

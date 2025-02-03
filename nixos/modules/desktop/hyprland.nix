@@ -42,9 +42,6 @@
     ## Hyrpland Cursor ##
     hyprcursor
 
-    ## QT Support ##
-    hyprland-qt-support
-
     ## Polkit authentication agent ##
     hyprpolkitagent
 

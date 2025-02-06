@@ -48,12 +48,12 @@
 
       ## Desktop Settings ##
         # Plasma Desktop 
-      #../../modules/desktop/plasma.nix
-      #../../modules/desktop/sddm.nix
+      ../../modules/desktop/plasma.nix
+      ../../modules/desktop/sddm.nix
 
         # Gnome Desktop 
-      ../../modules/desktop/gnome.nix
-      ../../modules/desktop/gdm.nix
+      #../../modules/desktop/gnome.nix
+      #../../modules/desktop/gdm.nix
 
         # Hyprland Desktop
       #../../modules/desktop/hyprland.nix

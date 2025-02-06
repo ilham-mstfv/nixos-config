@@ -10,12 +10,10 @@
 
     ohMyZsh = {
       enable = true;
-      # theme = "arrow";
-      # plugins = [ "git" ];
     };
      
-    promptInit = 
-      "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    #promptInit = 
+    #  "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
     histSize = 10000;
     histFile = "$HOME/.zsh_history";

@@ -61,6 +61,7 @@
 
       ## Shell settings ##
       ../../modules/shell/zsh.nix
+      ../../modules/shell/starship.nix
       #../../modules/shell/kmscon.nix
       #../../modules/shell/shellAliases.nix
 

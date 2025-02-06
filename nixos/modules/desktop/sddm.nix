@@ -21,7 +21,7 @@
   };
 
   ## Theme Settings ##
-  services.displayManager.sddm.theme = "sddm-astronaut-theme";
+  #services.displayManager.sddm.theme = "sddm-astronaut-theme";
   
   environment.systemPackages = [
     /*

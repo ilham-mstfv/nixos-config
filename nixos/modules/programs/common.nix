@@ -99,8 +99,9 @@
  
    
     ## Office ##
-    libreoffice-qt6
-    #wpsoffice    
+    #libreoffice-qt6
+    #wpsoffice
+    onlyoffice-desktopeditors
 
 
     ## Wine ##

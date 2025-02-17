@@ -86,7 +86,7 @@
 
       ## Virtualization ##
       #../../modules/virtualization/virtualbox.nix
-      #../../modules/virtualization/qemu.nix
+      ../../modules/virtualization/qemu.nix
       ../../modules/virtualization/docker.nix
 
 

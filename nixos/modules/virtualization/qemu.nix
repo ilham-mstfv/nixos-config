@@ -10,7 +10,8 @@
 
   programs.virt-manager.enable = true;
 
-  environment = {
-    systemPackages = [ pkgs.qemu_full ];
-  };
+  environment.systemPackages = with pkgs; [
+    qemu_full
+    quickemu
+  ];
 }

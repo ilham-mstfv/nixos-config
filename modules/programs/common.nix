@@ -88,6 +88,7 @@
       [ # Write your VSCode extensions here.
         jnoortheen.nix-ide
 	bbenoist.nix
+	arrterian.nix-env-selector
         vscjava.vscode-java-pack
         ms-python.python
 	ms-python.vscode-pylance

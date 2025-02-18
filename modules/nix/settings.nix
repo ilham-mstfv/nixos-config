@@ -24,7 +24,7 @@
   ### Nix Helper ###
   programs.nh = {
     enable = true;
-    flake = "/home/${vars.user}/nixos-config/nixos";
+    flake = "/home/${vars.user}/nixos-config";
 
     clean = 
     { # Garbage Collector

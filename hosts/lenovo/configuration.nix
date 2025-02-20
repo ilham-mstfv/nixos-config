@@ -35,7 +35,7 @@
       ../../modules/hardware/sound.nix
 
         # TLP settings
-      ../../modules/hardware/tlp.nix
+      #../../modules/hardware/tlp.nix
 
 
       ## User settings ##

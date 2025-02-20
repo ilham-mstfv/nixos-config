@@ -95,6 +95,7 @@
 	ms-python.debugpy
 	vscodevim.vim
 	github.github-vscode-theme
+	catppuccin.catppuccin-vsc
       ];
     })
  

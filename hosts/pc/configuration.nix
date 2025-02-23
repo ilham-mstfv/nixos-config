@@ -18,6 +18,7 @@
       ## Hardware ## 
         # Nvidia 
       ../../modules/hardware/nvidia.nix
+      ../../modules/hardware/nvidiaPowerMizer.nix
 
         # Zram 
       ../../modules/hardware/zram.nix

@@ -17,7 +17,8 @@
 
       ## Hardware ##
         # Nvidia 
-      #../../modules/hardware/nvidia.nix
+      ../../modules/hardware/nvidia.nix
+      ../../modules/hardware/nvidiaPowerMizer.nix
 
         # Logitech
       #../../modules/hardware/logitech.nix

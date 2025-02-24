@@ -24,6 +24,12 @@
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
+    settings = {
+      options = {
+        localAnnounceEnabled = true;
+        relaysEnabled = true;
+      };
+    };
   };
 
   # The Fuck Service

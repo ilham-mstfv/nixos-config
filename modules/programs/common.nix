@@ -125,6 +125,7 @@
     ## Other ##
     ventoy-full
     obsidian
+    godot_4
 
   ];
 

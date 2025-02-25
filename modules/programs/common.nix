@@ -76,6 +76,7 @@
     syncthing
     fastfetch
     python3Full
+    nix-init
 
     
     ## Multimedia ##

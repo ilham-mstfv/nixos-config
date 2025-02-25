@@ -37,6 +37,6 @@
 
   ### Install some useful packages ###
   environment.systemPackages = with pkgs; [
-    
+    steam-tui    
   ];
 }

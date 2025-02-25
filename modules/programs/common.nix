@@ -38,6 +38,10 @@
     alias = "fuck";
   };
 
+  programs.firejail = {
+    enable = true;
+  };
+
   # Enable Neovim
   programs.neovim = {
     enable = true;

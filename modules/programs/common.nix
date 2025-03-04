@@ -104,6 +104,7 @@
         ms-python.python
 	ms-python.vscode-pylance
 	ms-python.debugpy
+	ms-azuretools.vscode-docker
 	vscodevim.vim
 	github.github-vscode-theme
 	catppuccin.catppuccin-vsc

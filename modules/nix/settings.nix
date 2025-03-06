@@ -33,4 +33,20 @@
       extraArgs = "--keep-since 7d";
     };    
   };
+
+  ## Nix-ld service ##
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+    ];
+  };
+
+  ## Envfs service ##
+  services = {
+    envfs = {
+      enable = true;
+    };
+  };
 }

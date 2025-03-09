@@ -91,7 +91,7 @@
 
     ## Development ##
     postman
-    #jetbrains.idea-ultimate
+    jetbrains.idea-ultimate
     #jetbrains.pycharm-community
 
     (vscode-with-extensions.override {

@@ -47,6 +47,7 @@
     enable = true;
     vimAlias = true;
     viAlias = true;
+    defaultEditor = true;
   };
 
   # Enable CUPS to print documents.

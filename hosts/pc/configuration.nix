@@ -61,6 +61,7 @@
       ../../modules/shell/zsh.nix
       #../../modules/shell/kmscon.nix
       ../../modules/shell/shellAliases.nix
+      ../../modules/shell/starship.nix
 
       ## Fonts ##
       ../../modules/fonts/settings.nix

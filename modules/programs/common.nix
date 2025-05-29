@@ -71,6 +71,7 @@
     inxi
     btop
     htop
+    tmux
     #warpd
     xclip
     wl-clipboard

@@ -79,6 +79,7 @@
     fastfetch
     python3Full
     nix-init
+    lazygit
 
     
     ## Multimedia ##

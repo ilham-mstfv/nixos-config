@@ -31,7 +31,7 @@
       ../../modules/hardware/ntfs.nix
 
         # Bluetooth 
-      #../../modules/hardware/bluetooth.nix
+      ../../modules/hardware/bluetooth.nix
 
         # Sound settings 
       ../../modules/hardware/sound.nix

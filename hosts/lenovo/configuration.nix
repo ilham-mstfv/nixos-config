@@ -63,6 +63,9 @@
         # Hyprland Desktop
       #../../modules/desktop/hyprland.nix
 
+        # Stylix
+      ../../modules/desktop/stylix.nix
+
 
       ## Shell settings ##
       ../../modules/shell/zsh.nix

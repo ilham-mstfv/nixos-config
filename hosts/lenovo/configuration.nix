@@ -61,7 +61,7 @@
       #../../modules/desktop/gdm.nix
 
         # Hyprland Desktop
-      #../../modules/desktop/hyprland.nix
+      ../../modules/desktop/hyprland.nix
 
         # Stylix
       ../../modules/desktop/stylix.nix

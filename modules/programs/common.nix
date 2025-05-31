@@ -75,6 +75,7 @@
     #warpd
     xclip
     wl-clipboard
+    brightnessctl
     syncthing
     fastfetch
     python3Full

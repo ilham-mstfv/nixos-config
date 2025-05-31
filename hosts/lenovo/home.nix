@@ -3,6 +3,7 @@
 {
   imports = [
     #../../modules/home/...
+    ../../modules/home/programs/kitty.nix
   ];
 
 
@@ -21,7 +22,6 @@
     
   };
 
-  
-  home.stateVersion = "24.11";
   programs.home-manager.enable = true;
+  home.stateVersion = "24.11";
 }

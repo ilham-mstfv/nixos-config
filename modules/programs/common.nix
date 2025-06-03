@@ -63,7 +63,7 @@
   # List packages installed in system profile. To search: $ nix search wget
   environment.systemPackages = with pkgs; [
 
-    ## System Tools ##
+    ## Utilities ##
     wget
     fd
     zip
@@ -131,6 +131,7 @@
     ventoy-full
     obsidian
     godot_4
+    easyeffects
 
   ];
 

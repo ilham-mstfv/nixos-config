@@ -96,6 +96,8 @@
       #../../modules/virtualization/virtualbox.nix
       ../../modules/virtualization/qemu.nix
       ../../modules/virtualization/docker.nix
+      ../../modules/virtualization/podman.nix
+      ../../modules/virtualization/distrobox.nix
 
 
       ## Services ##

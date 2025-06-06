@@ -35,6 +35,10 @@
       enable32Bit = true;
     };  
 
+    nvidia-container-toolkit = {
+      enable = true;
+    };
+
     nvidia = { 
       ## Nvidia drivers. ## Options: production, stable, latest, beta, vulkan_beta, legacy_470/390/340
       package = config.boot.kernelPackages.nvidiaPackages.latest;

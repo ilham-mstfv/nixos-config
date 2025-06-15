@@ -51,6 +51,16 @@
     top-bar-organizer
     dash2dock-lite
     compiz-alike-magic-lamp-effect
+    forge
+    user-themes
+    just-perfection
+    quick-settings-tweaker
+    desktop-cube
+    gsconnect
+    applications-menu
+    openweather-refined
+    open-bar
+    media-controls
   ]);
 
 

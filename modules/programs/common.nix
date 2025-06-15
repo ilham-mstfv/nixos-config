@@ -32,17 +32,15 @@
     };
   };
 
-  # The Fuck Service
-  programs.thefuck = {
+  programs.pay-respects = {
     enable = true;
-    alias = "fuck";
+    alias = "respect";
   };
 
   programs.firejail = {
     enable = true;
   };
 
-  # Enable Neovim
   programs.neovim = {
     enable = true;
     vimAlias = true;
@@ -128,7 +126,7 @@
 
 
     ## Other ##
-    ventoy-full
+    #ventoy
     obsidian
     godot_4
     easyeffects

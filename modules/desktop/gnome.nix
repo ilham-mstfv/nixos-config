@@ -9,7 +9,7 @@
   services.xserver.enable = true;
 
   ## Enable Gnome
-  services.xserver.desktopManager = {
+  services.desktopManager = {
     gnome = {
       enable = true;
     };

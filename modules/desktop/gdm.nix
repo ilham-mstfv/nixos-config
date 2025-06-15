@@ -7,7 +7,7 @@
   services.xserver.enable = true;
 
   ## GDM settings ##
-  services.xserver.displayManager = {
+  services.displayManager = {
     gdm = { 
       ## Enable GDM ## 
       enable = true;
